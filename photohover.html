@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            padding: 10px;
+            background:repeating-linear-gradient(45deg,#FF6B6B 0 10px,#4ECDC4 0 10px,#4ECDC4 0 20px) ;
+            --g:content-box 50% 50%/200% 200% no-repeat;
+            -webkit-mask:
+            linear-gradient(#000 0 0),
+            linear-gradient(calc(135deg * var(--a,0deg)),#000 50.1%,#0000)var(--g),
+            linear-gradient(calc(-45deg * var(--a,0deg)),#000 50.1%,#0000)var(--g);
+            -webkit-mask-composite:xor, source-over;
+            mask-composite: exclude,add;
+            transition: .5s;
+            cursor: pointer;
+
+        }
+        img:hover{
+            -webkit-mask-position: 0% 0%,100% 100%;
+        }
+        body{
+             margin: 0;
+             min-height: 100vh;
+             display: grid;
+             place-content: center;
+             grid-auto-flow: column;
+             gap: 30px;
+             background: #E8DDCB;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR1I1wtX4vtX2Ixo0p7xWklI9FgExsCBO_ZQ&usqp=CAU">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQLZA2cjoeXsUEiAeoGY6yI7KfWR7Q3yVhaw&usqp=CAU" style="background: repeating-linear-gradient(-45deg,#8A9B0F 0 10px,#E97F02 0 20px)">
+</body>
+</html>

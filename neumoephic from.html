@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@import url("https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png");
+input{
+    caret-color: red;
+}
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ecf0f3;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    overflow: hidden;
+    font-family: poppins;
+}
+
+.container{
+    position: relative;
+    width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbceb1,-14px -14px 20px white;
+}
+.brand-logo{
+    height: 100px;
+    width: 100px;
+    background:url("data:image/png;base64,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");
+    margin: auto;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 7px 7px 10px #cbceb1,-7px -7px 10px white;
+}
+
+.brand-title{
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color:#1DA1F2;
+    letter-spacing: 1px;
+}
+.inputs{
+    text-align: left;
+    margin-top:30px;
+}
+label, input, button{
+    display: block;
+    width: 100%;
+    padding: 0%;
+    border:none;
+    outline: none;
+    box-sizing: border-box;
+}
+label{
+    margin-botton:4px;
+}
+label:nth-child(2){
+    margin-top: 12px;
+}
+input::placeholder{
+    color:gray;
+}
+input{
+    background: #ecf0f3;
+    padding: 10px;padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbceb1, inset -6px -6px 6px white;
+}
+button{
+    color: white;
+    margin-top: 20px;
+    background: #1DA1F2;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbceb1, -6px -6px 6px white;
+    transition: 0.5s;
+}
+button:hover{
+    box-shadow: none;
+}
+h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="brand-logo"></div>
+        
+        <div class="brand-title">TWITTER</div>
+        <div class="inputs">
+            <label>EMAIL</label>
+            <input type="email" placeholder="">
+            <label>PASSWORD</label>
+            <input type="password" placeholder="">
+            <button type="submit">LOGIN</button>
+        </div>
+
+    </div>
+</body>
+</html>

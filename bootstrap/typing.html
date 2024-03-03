@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppines',sans-serif;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: aqua;
+        }
+        .wrapper{
+            width: 770px;
+            padding: 35px;
+            background: #fff;
+            border-radius: 10px;
+        }
+        .wrapper .content-box{
+            padding:  13px 20px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+
+        }
+        .content-box .typing-text{
+            max-height: 255px;
+            overflow-y: auto;
+        }
+        .typing-text p{
+            font-size: 21px;
+            text-align: justify;
+            letter-spacing: 1px;
+            word-break: break-all;
+        }
+        .typing-text::-webkit-scrollbar{
+            width: 0;
+        }
+        .content-box .content{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 17px;
+            padding: 12px 0;
+            border-top: 1px solid #ccc;
+            align-items: center;
+        }
+
+        .content .result-details{
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% - 140px);
+        }
+        .result-details li{
+            list-style: none;
+            display: flex;
+        }
+        .result-details li span{
+            display: block;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        .result-details li p{
+            font-size: 19px;
+        }
+        .result-details li:not(:first-child){
+            padding-left: 22px;
+            border-left: 1px solid #ccc;
+        }
+        .result-details li b{
+            font-weight: 500;
+        }
+        .result-details li:not(:first-child) span{
+            font-weight: 500;
+        }
+        .content button{
+            border: none;
+            outline: none;
+            width: 105px;
+            background: #17a2b8;
+            padding: 8px 0;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .content button:active{
+           transform: scale(0.97);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content-box">
+            <div class="typing-text">
+                <p>Tap into the wealth of knowledge within your enterprise content with generative AI. Ask Box AI anything and get answers in seconds — from summarizing a lengthy research study to uncovering key findings across multiple documents. With Box AI-powered insights, you can make mission-critical decisions faster and with confidence.</p>
+            </div>
+            <div class="content">
+                <ul class="result-details">
+                    <li class="time">
+                        <p>Time Left:</p>
+                        <span><b>60</b>s</span>
+                    </li>
+                    <li class="mistake">
+                        <p>Mistakes:</p>
+                        <span>0</span>
+                        </li>
+                    <li class="wpm">
+                        <p>WPM:</p>
+                        <span>0</span>
+                        </li>
+                        <li class="cpm">
+                            <p>CPM:</p>
+                            <span>0</span>
+                     </li>
+                </ul>
+                <button>Try Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+       
+    </script>
+</body>
+</html>

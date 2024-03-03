@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond</title>
+    <style>
+        .diamond{
+            clip-path: polygon(69.3% 0%,83.4% 38%,52.1% 100.3%,18% 40.5%,33% 0.3%);
+            width:50px;
+            position: relative;
+            border-width: 0 30px 30px 30px;
+            border-style:solid;
+            border-color:rgb(241, 241, 239);
+            border-bottom-color: #359797;
+        }
+         button{
+            box-shadow: 0 0 5px cyan,
+            0 0 25px cyan;
+         }
+         button:hover{
+            box-shadow: 0 0 5px cyan,
+            0 0 25px cyan,0 0 50px cyan,
+            0 0 100px cyan,0 0 200px cyan;
+
+         }
+         body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+         .loder{
+            height: 200px;
+            width:200px;
+            border: 12px solid #e3e3e3;
+            border-radius: 50%;
+            border-right-color: blue;
+            animation: spin 1s ease infinite;
+
+         }
+         @keyframes spin{
+            100%{
+                transform: rotate(360deg);
+            }
+         }
+         :root{
+            --color1:#f1c40f;
+            --color2:#2c3e50;
+            --speed:4s;
+         }
+         html,
+         body{
+            height: 100%;
+         }
+         @keyframes slide{
+            from{
+               background-position-x:0 ;
+            }
+            to{
+               background-position-x: 113px;
+            }
+         }
+         .container{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         .container .bar{
+            min-height: 100px;
+            border-radius: 10px;
+            width:calc(113px);
+            box-shadow: 0px 10px 13px -6px #2c3e50;
+            background-color: var(--color2);
+            background-image: reeapting-linear-gradient(45deg,transparent , transparent 40px,var(--color1)40px,var(--color1)80px);
+            animation: slide var(--speed)linear infinite;
+            will-change:background-position;
+         }
+
+
+
+
+
+            
+        
+    </style>
+</head>
+<body>
+   
+    <div class="diamond"></div>
+   <div> <button>Golwing Button</button></div>
+   <div class="loder"></div>
+   <div class="conatainer">
+      <div class="bar"></div>
+      
+   </div>
+</body>
+</html>

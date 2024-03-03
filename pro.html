@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           margin: 0;
+           padding: 0;
+           background-image: radial-gradient(#c7c7c7 25%,#c7c7c7 74%);
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .clearfix{
+            clear: both;
+        }
+        .main{
+            height: 2000px;
+            width: 1100px;
+            background-color: white;
+            box-shadow: 5px 7px 15px #b9b6b6;
+            margin: 20px auto;
+        }
+        .top-section{
+            background-color: #151b29;
+            text-align: center;
+            padding: 20px;
+        }
+        .profile{
+            width: 150px;
+            border-radius: 50%;
+        }
+        .p1{
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0px;
+            margin-top: 10px;
+        }
+        p1 span{
+            font-weight: 100;
+            color: #c7c7c7;
+        }
+        .p2{
+            font-size: 20px;
+            color: #c7c7c7;
+            margin: 0px;
+            margin-top: 10px;
+        }
+        .col-div-8{
+            width: 35%;
+            float: left;
+        }
+        .col-div-8{
+            width: 62%;
+            float: left;
+        }
+        .line{
+            border-left:1px solid #4e4c4c ;
+            height: 800px;
+            margin-top: 30px;
+            float: left;
+        }
+        .content-box{
+            padding: 20px;
+        }
+        .head{
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .p3{
+            color: #141313;
+            margin-bottom: -5px;
+        }
+        .fa{
+            color: #151b29;
+        }
+        .skills{
+            margin-left: -20px;
+            margin-bottom: 0px;
+        }
+        .skills li{
+            padding: 5px;
+        }
+        .skills li span{
+            color: #c7c7c7;
+        }
+        .p-4{
+            font-size: 14px;
+            color: #c7c7c7;
+        }
+        img{
+            border-radius: 50%;
+        }
+        .about{
+            text-align: center;
+        }
+        .para{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="top-section">
+            <img src="data:image/jpeg;base64,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">
+            <p class="p1">SUMI<span> KUMARI</span></p>
+            <p class="p2">WEB DEVELOPER</p>
+        </div>
+        <div class="clearfix"></div>
+         <div class="col-div-4">
+            <div class="content-box" style="padding-left: 40px;">
+                <p class="head"><u>Contact</u></p>
+                </div>
+                <ul>
+                    <li>
+                        <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                        <span class="text">+91 9142118738</span>
+                    </li>
+                    <li>
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon>
+                        </span>
+                        <span class="text">sumisingh11111@gmail.com</span>
+                    </li>
+                     <li>
+                        <span class="icon"><ion-icon name="globe-outline"></ion-icon></span>
+                        <span class="text">www.mywebsite.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="text">Patna, Bihar,India</span>
+                <br/>
+                <p class="head"><u>My Skills</u></p>
+                <ul class="skills">
+                    <li><span></span>Web Design</span></li>
+                    <li><span></span>HTML</span></li>
+                    <li><span></span>CSS</span></li>
+                    <li><span></span>Java Script</span></li>
+                </ul>
+                <br/>
+              
+                <p class="head"><u>Languages</u></p>
+                <p class="p3">Hindi</p>
+                <p class="p3">English</p>
+                <h2 class="about"><u> About </u></h2>
+                <p class="para">Highly motivated and detail-oriented Full Stack Developer with a passion for creating efficient and user-
+                    friendly web applications. Currently pursuing a degree in Computer Science, I bring a strong foundation in
+                    programming and a willingness to learn and adapt to new technologies. Excited to contribute to projects that
+                    reqire both front-end and back-end development skills.
+                    
+                    </p>
+                    <h2 class="edu"><u>Education</u></h2>
+                    <h3 class="box">Bachelor degree</h3>
+                    <p class="con">Bachelor of Computer Application<br>2022-2025</p>
+                    
+
+            </div>
+        </div>
+      
+        
+       
+           
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

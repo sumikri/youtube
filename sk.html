@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+        
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #495bfd;
+  --secondary-color: #059669;
+  --background-color: #080808;
+  --text-light: #cbd5e1;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__subheader {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #c2b3ea,
+    #99b8f1,
+    #6abceb,
+    #41bed8,
+    #3abdbb,
+    #44c1ac,
+    #59c39a,
+    #72c486,
+    #83cd7f,
+    #96d676,
+    #acde6c,
+    #c5e562
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+}
+
+.nav__container {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--text-light);
+}
+
+.nav__logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  padding: 0 0.5rem;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--white);
+}
+
+.header__container {
+  padding-top: 10rem;
+  text-align: center;
+}
+
+.header__container .section__header {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 6rem;
+}
+
+.header__container .section__header span {
+  -webkit-text-stroke: 1px var(--text-light);
+  -webkit-text-fill-color: var(--background-color);
+}
+
+.header__container p {
+  max-width: 900px;
+  margin: 1rem auto 2rem;
+  color: var(--text-light);
+}
+
+.service__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.service__card {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+
+.service__icon {
+  margin-bottom: 1rem;
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+}
+
+.service__icon img {
+  max-width: 30px;
+}
+
+.service__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.service__card p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.service__card a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.service__card a span {
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.service__card a:hover span {
+  transform: translateX(5px);
+}
+
+.template__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.template__container .section__subheader {
+  text-align: left;
+}
+
+.template__container .section__header {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.template__container .description {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.template__image {
+  text-align: center;
+}
+
+.template__image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
+}
+
+.client__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.client__card {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+
+.client__card img {
+  margin-bottom: 1rem;
+  max-width: 60px;
+  border: 2px solid var(--white);
+  border-radius: 100%;
+}
+
+.client__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.client__card p {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.question__accordian {
+  max-width: 900px;
+  margin: 4rem auto 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.question__box {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  color: var(--text-light);
+}
+
+.question__box .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.question__box .title .icon {
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.question__box .content {
+  height: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.question__box.active .content {
+  height: 90px;
+  padding-top: 1rem;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.footer__col p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer__col p:hover {
+  color: var(--white);
+}
+
+.footer__col p span {
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+.footer__bar {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--text-light);
+}
+
+.footer__bar p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socials span {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--text-light);
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials span:hover {
+  color: var(--white);
+}
+
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header__container {
+    padding-top: 5rem;
+  }
+
+  .service__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .template__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .template__content,
+  .template__content :is(.section__subheader, .section__header) {
+    text-align: center;
+  }
+
+  .template__image {
+    grid-area: 1/1/2/2;
+  }
+
+  .client__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .question__box.active .content {
+    height: 135px;
+  }
+}
+
+@media (width < 600px) {
+  .header__container .section__header {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .service__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .client__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .question__box.active .content {
+    height: 180px;
+  }
+
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__bar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <nav class="section__container nav__container">
+      <div class="nav__logo">WDM</div>
+      <ul class="nav__links">
+        <li class="link"><a href="#">Home</a></li>
+        <li class="link"><a href="#">Pricing</a></li>
+        <li class="link"><a href="#">Company</a></li>
+        <li class="link"><a href="#">Resource</a></li>
+        <li class="link"><a href="#">Blog</a></li>
+      </ul>
+      <button class="btn">Purchase</button>
+    </nav>
+    <header class="section__container header__container">
+      <h1 class="section__header">
+        Create fast websites,<br />
+        in no <span>time.</span>
+      </h1>
+      <p>
+        Looking to create a website quickly and easily? Our website building
+        service offers fast turnaround times and streamilned design options,
+        allowing you to get online in no time.
+      </p>
+      <button class="btn">Create Account</button>
+    </header>
+
+    <section class="section__container service__container">
+      <p class="section__subheader">Our Services</p>
+      <h2 class="section__header">We Help to built startup websites</h2>
+      <div class="service__grid">
+        <div class="service__card">
+          <div class="service__icon">
+            <img src="https://raw.githubusercontent.com/WebDesignMastery/StartUp_25-06-23/0680eca621f81b18a2d7cfe8c929400ec3c44bdf/assets/service-1.png" alt="service" />
+          </div>
+          <h4>Website Builders</h4>
+          <p>
+            Creating stunning, user-friendly websites tailored to your brand,
+            with expertise in design, development, and online success.
+          </p>
+          <a href="#">
+            Learn more <span><i class="ri-arrow-right-line"></i></span>
+          </a>
+        </div>
+        <div class="service__card">
+          <div class="service__icon">
+            <img src="https://raw.githubusercontent.com/WebDesignMastery/StartUp_25-06-23/0680eca621f81b18a2d7cfe8c929400ec3c44bdf/assets/service-1.png" alt="service" />
+          </div>
+          <h4>Content Management System</h4>
+          <p>
+            Streamline website management with a user-friendly platform for easy
+            content creation, editing, and organization.
+          </p>
+          <a href="#">
+            Learn more <span><i class="ri-arrow-right-line"></i></span>
+          </a>
+        </div>
+        <div class="service__card">
+          <div class="service__icon">
+            <img src="https://raw.githubusercontent.com/WebDesignMastery/StartUp_25-06-23/0680eca621f81b18a2d7cfe8c929400ec3c44bdf/assets/service-1.png" alt="service" />
+          </div>
+          <h4>Web Design</h4>
+          <p>
+            User-centric web design. Elevate your online presence with
+            beautiful, functional websites tailored to your unique needs.
+          </p>
+          <a href="#">
+            Learn more <span><i class="ri-arrow-right-line"></i></span>
+          </a>
+        </div>
+        <div class="service__card">
+          <div class="service__icon">
+            <img src="https://raw.githubusercontent.com/WebDesignMastery/StartUp_25-06-23/0680eca621f81b18a2d7cfe8c929400ec3c44bdf/assets/service-1.png" alt="service" />
+          </div>
+          <h4>Hosting Service</h4>
+          <p>
+            Reliable and secure hosting solutions for website performance,
+            ensuring optimal speed and uptime for online presence.
+          </p>
+          <a href="#">
+            Learn more <span><i class="ri-arrow-right-line"></i></span>
+          </a>
+        </div>
+        <div class="service__card">
+          <div class="service__icon">
+            <img src="https://raw.githubusercontent.com/WebDesignMastery/StartUp_25-06-23/0680eca621f81b18a2d7cfe8c929400ec3c44bdf/assets/service-1.png">
+            </div>
+          <h4>E-Commerce Solutions</h4>
+          <p>
+            Scalable e-commerce solutions that drive online sales, enhance user
+            experience, and boost business growth.
+          </p>
+          <a href="#">
+            Learn more <span><i class="ri-arrow-right-line"></i></span>
+          </a>
+        </div>
+        <div class="service__card">
+          <div class="service__icon">
+            <img src="https://raw.githubusercontent.com/WebDesignMastery/StartUp_25-06-23/0680eca621f81b18a2d7cfe8c929400ec3c44bdf/assets/service-1.png" alt="service" />
+          </div>
+          <h4>Web Development</h4>
+          <p>
+            Expertly crafting functional and dynamic websites, tailored to your
+            unique needs and designed to captivate your audience.
+          </p>
+          <a href="#">
+            Learn more <span><i class="ri-arrow-right-line"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container template__container">
+      <div class="template__content">
+        <p class="section__subheader">Our Templates</p>
+        <h2 class="section__header">Powerful UI kit templates for webflow</h2>
+        <p class="description">
+          Hosting services like Bluehost, HostGator, or SiteGround provide the
+          server space and technology needed to keep your website online.
+        </p>
+        <button class="btn">Learn more</button>
+      </div>
+      <div class="template__image">
+        <img src="https://www.shutterstock.com/image-photo/smiling-positive-attractive-asian-young-260nw-2317594959.jpg" alt="template" />
+      </div>
+    </section>
+
+    <section class="section__container client__container">
+      <p class="section__subheader">Testimonials</p>
+      <h2 class="section__header">What client says about us</h2>
+      <div class="client__grid">
+        <div class="client__card">
+          <img src="https://raw.githubusercontent.com/WebDesignMastery/StartUp_25-06-23/0680eca621f81b18a2d7cfe8c929400ec3c44bdf/assets/service-1.png" alt="client" />
+          <h4>Love the simplicity</h4>
+          <p>
+            They understood our brand and created a stunning website design.
+            Professional, responsive, and on-time delivery. Highly recommended!
+          </p>
+        </div>
+        <div class="client__card">
+          <img src="https://raw.githubusercontent.com/WebDesignMastery/StartUp_25-06-23/0680eca621f81b18a2d7cfe8c929400ec3c44bdf/assets/service-1.png" alt="client" />
+          <h4>Excellent Design and Service</h4>
+          <p>
+            Efficient, reliable, and results-oriented. Visually appealing
+            website, improved online visibility. Highly recommended!
+          </p>
+        </div>
+        <div class="client__card">
+          <img src="https://raw.githubusercontent.com/WebDesignMastery/StartUp_25-06-23/0680eca621f81b18a2d7cfe8c929400ec3c44bdf/assets/service-1.png" alt="client" />
+          <h4>Efficient and Reliable</h4>
+          <p>
+            Best decision we made. Stunning website, exceptional support. Always
+            available and prompt issue resolution. Hassle-free experience!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container question__container">
+      <p class="section__subheader">Hhave Questions?</p>
+      <h2 class="section__header">Frequently asked questions</h2>
+      <div class="question__accordian">
+        <div class="question__box">
+          <div class="title">
+            <span>What services does your website design agency offer?</span>
+            <span class="icon"><i class="ri-add-fill"></i></span>
+          </div>
+          <div class="content">
+            Our website design agency offers a wide range of services including
+            custom website design, responsive design, e-commerce development,
+            content management system integration, search engine optimization
+            (SEO), website maintenance, and ongoing support.
+          </div>
+        </div>
+        <div class="question__box">
+          <div class="title">
+            <span
+              >What is the typical timeline for completing a website design
+              project?</span
+            >
+            <span class="icon"><i class="ri-add-fill"></i></span>
+          </div>
+          <div class="content">
+            The timeline for completing a website design project depends on
+            various factors such as the size of the website, functionality
+            requirements, and the availability of content. On average, a typical
+            website design project takes approximately 4-8 weeks from initial
+            consultation to launch.
+          </div>
+        </div>
+        <div class="question__box">
+          <div class="title">
+            <span>Do you provide ongoing website maintenance and support?</span>
+            <span class="icon"><i class="ri-add-fill"></i></span>
+          </div>
+          <div class="content">
+            Yes, we offer ongoing website maintenance and support services to
+            ensure your website remains up-to-date, secure, and performs
+            optimally. Our maintenance plans include regular updates, backups,
+            security monitoring, and technical support.
+          </div>
+        </div>
+        <div class="question__box">
+          <div class="title">
+            <span
+              >Can you create a custom website design that aligns with our brand
+              identity?</span
+            >
+            <span class="icon"><i class="ri-add-fill"></i></span>
+          </div>
+          <div class="content">
+            Absolutely! We specialize in creating custom website designs that
+            are tailored to reflect your unique brand identity. Our team works
+            closely with you to understand your brand and design a website that
+            captures your vision, values, and target audience.
+          </div>
+        </div>
+        <div class="question__box">
+          <div class="title">
+            <span
+              >Do you offer responsive design to ensure our website works well
+              on mobile devices?</span
+            >
+            <span class="icon"><i class="ri-add-fill"></i></span>
+          </div>
+          <div class="content">
+            Yes, responsive design is a crucial aspect of our website
+            development process. We create websites that adapt seamlessly to
+            different screen sizes and devices, ensuring optimal user experience
+            and usability on desktops, tablets, and smartphones.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section__container footer__container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h4>WDM</h4>
+          <p>
+            <span><i class="ri-mail-fill"></i></span> example@gmail.com
+          </p>
+          <p>
+            <span><i class="ri-phone-fill"></i></span> +91 **********
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>About</h4>
+          <p>Home</p>
+          <p>Pricing</p>
+          <p>Company</p>
+          <p>Resource</p>
+        </div>
+        <div class="footer__col">
+          <h4>Features</h4>
+          <p>Blog</p>
+          <p>Privacy Policy</p>
+          <p>Terms & Conditions</p>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <p>Department</p>
+          <p>Media</p>
+          <p>Support</p>
+        </div>
+      </div>
+    </footer>
+    <div class="section__container footer__bar">
+      <p>Copyright © 2024 All rights reserved.</p>
+      <div class="socials">
+        <span><i class="ri-facebook-fill"></i></span>
+        <span><i class="ri-twitter-fill"></i></span>
+        <span><i class="ri-instagram-line"></i></span>
+        <span><i class="ri-youtube-fill"></i></span>
+      </div>
+    </div>
+      <script src="script.js"></script>
+    <script>
+      const questionBox = document.getElementsByClassName("question__box");
+
+      for (let i = 0; i < questionBox.length; i++) {
+        questionBox[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+      }
+    </script>
+  </body>
+</html>

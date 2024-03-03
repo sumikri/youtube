@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myscripts.js"></script>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'poppins',sans-serif;
+            background: #080808;
+            
+          }
+          body{
+            width: 100%;
+            width: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg,#0a0a0a);
+          }
+          .calculator{
+            border: 1px solid #627aa9;
+            padding: 20px;
+            border-radius: 16px;
+            background: transparent;
+            box-shadow: 0px 3px 15px rgb(132, 144, 169);
+          }
+          input{
+            width: 320px;
+            border: none;
+            padding: 24px;
+            margin: 10px;
+            background: transparent;
+            box-shadow: 0px 3px 15px white;
+            font-size: 40px;
+            text-align: right;
+            cursor: pointer;
+            color:white;
+          }
+          input::placeholder{
+            color: white;
+          }
+          button{
+            background:none;
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            border-radius: 50%;
+            background: transparent;
+            color:white;
+            font-size: 20px;
+            box-shadow: -8px -8px 15px rgba(255,255,255,0.1);
+            cursor: pointer;
+          }
+          .equalbtn{
+            background-color: darkorange;
+          }
+          .operator{
+            color: chartreuse;
+          }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" id="inputBox" placeholder="0">
+            <div>
+                <button class="button operator">Ac</button>
+                <button class="button operator">DEL</button>
+                <button class="button operator">%</button>
+                <button class="button operator">/</button>
+            </div>
+            
+            <div>
+                <button class="button ">7</button>
+                <button class="button ">8</button>
+                <button class="button ">9</button>
+                <button class="button operator">*</button>
+            </div>
+            <div>
+                <button class="button ">4</button>
+                <button class="button ">5</button>
+                <button class="button ">6</button>
+                <button class="button operator">-</button>
+            </div>
+            <div>
+                <button class="button ">1</button>
+                <button class="button ">2</button>
+                <button class="button ">3</button>
+                <button class="button operator ">+</button>
+            </div>
+            <div>
+                <button class="button ">00</button>
+                <button class="button ">0</button>
+                <button class="button ">.</button>
+                <button class="button operator">=</button>
+            </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      let input = document.getElementById('inputBox');
+let buttons = document.querySelectorAll('button');
+
+let string = "";
+let arr = Array.from(buttons);
+arr.forEach(button => {
+    button.addEventListener('click', (e) =>{
+        if(e.target.innerHTML == '='){
+            string = eval(string);
+            input.value = string;
+        }
+
+        else if(e.target.innerHTML == 'AC'){
+            string = "";
+            input.value = string;
+        }
+        else if(e.target.innerHTML == 'DEL'){
+            string = string.substring(0, string.length-1);
+            input.value = string;
+        }
+        else{
+            string += e.target.innerHTML;
+            input.value = string;
+        }
+
+    })
+})
+
+  </script>
+
+    
+</body>
+</html>

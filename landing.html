@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             font-family: 'Poppines'sans-serif;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+        }
+        #main{
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        #nav{
+            height: 100px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: rgb(253, 253, 253);
+            display: flex;
+            padding: 0 40px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #nav>h1{
+            font-size: 31px;
+            font-weight: 100px;
+        }
+        #nav #part2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #nav #part2 a{
+            text-decoration: none;
+            color: #222;
+            margin: 20px;
+        } 
+        #nav #part2 a:nth-child(6){
+            background-color: rgb(255, 255, 255);
+            padding: 7px 18px ;
+            border-radius: 50px;
+            position: relative;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        #nav #part2 a:nth-child(6) #green{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: springgreen;
+            top: 0;
+            left: -100%;
+            transition: 0.6s;
+        }
+        #nav #part2 a:nth-child(6):hover #green{
+            left: 0;
+        }
+        #main>h1{
+            font-size: 5.5vw;
+            font-weight: 200;
+            width: 60%;
+            z-index: 99;
+            position: relative;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        #main #img1{
+            height: 400px;
+            width: 260px;
+            position: absolute;
+            left: 6%;
+            top: 20%;
+        }
+        #main #img2{
+            height: 260px;
+            width: 250px;
+            position: absolute;
+            right:25%;
+            top: 18%;
+        }
+        #main #img3{
+            height: 210px;
+            width: 200px;
+            position: absolute;
+            right: 7%;
+            bottom: 6%;
+        }
+        #main img{
+            transition: margin 0.8s ease;
+        }
+        #main img:hover{
+           margin-top: -20px;
+        }
+        #part2 a:hover{
+             background-color: rgb(218, 189, 152);
+             width: 10%;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        #page3{
+            height: 70vh;
+            width: 100%;
+            background-color: rgb(8, 8, 8);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            flex-direction: column;
+        }
+        #page3 h5{
+            font-size: 19px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 500;
+
+        }
+        #page3 h1{
+            font-size: 48px;
+            font-family: 'Times New Roman', Times, serif;
+            width: 70%;
+            text-align: center;
+            font-weight: 100;
+            margin: 30px 0;
+        }
+        #about-us{
+           
+            display: flex;
+            align-items: center;
+            
+        }
+        #about-us button{
+            font-size: 28px;
+            font-weight: 500;
+            border-radius: 50px;
+        }
+       #page4{
+            height:100% ;
+          
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="nav">
+            <h1>This is digital</h1>
+            <div id="part2">
+                <a href="#">Services</a>
+                <a href="#">Work</a>
+                <a href="#">About</a>
+                <a href="#">Culture</a>
+                <a href="#">Careera</a>
+                <a href="#">
+                    <h5>Contact Us</h5>
+                    <div id="green"></div>
+                </a>
+            </div>
+            
+        </div>
+        <h1>Digital Performance solution</h1>
+        <img src="https://media.istockphoto.com/id/890220812/photo/replacement-windows.jpg?s=612x612&w=0&k=20&c=8i8OcejvfmLNz6PnGDmBhkj2DA8TSm3DCvvvaX82lAo=" alt="" id="img1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS34olFWbRA7Gmo1efYlJileoMLEFAGiiREGEhsBcncdQ&s" alt="" id="img2">
+        <img src="https://images.dwell.com/photos-6063391372700811264/6133584138612768768-medium/window-seat-in-a-renovated-bedroom.jpg" alt="" id="img3">
+    </div>
+    <div id="page3">
+       <h5>A Digital Performance Solutions Agency in Manchester</h5>
+       <h1>We combine network agency expertise, with a highly collaborative relationship. We're a little different, This is Digital.</h1>
+       <div id="about-us">
+        <h4><button>About us</button></h4>
+       <div id="page4"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script>
+        gsap.from("#img1",{
+            delay:0.4,
+            opacity:0,
+            duration:1,
+            y:60
+        })
+        gsap.from("#img2",{
+            delay:0.4,
+            opacity:0,
+            duration:1,
+            x:60
+        })
+        gsap.from("#img3",{
+            delay:0.4,
+            opacity:0,
+            duration:1,
+            y:-60
+        })
+        gsap.from("#main h1",{
+            delay:0.4,
+            opacity:0,
+            duration:1,
+           
+        })
+        gsap.from("#page3 h5 ,#page3 h1, #page3 #about-us ",{
+            opacity:0,
+            stagger:0.4,
+            scrollTrigger:{
+                trigger:"#page3 h5",
+                scroller:"body",
+               start:"top 60%",
+              
+            }
+        })
+    </script>
+</body>
+</html>

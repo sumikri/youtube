@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Parlour</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffd700;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+section {
+    padding: 2em;
+}
+
+.service {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+
+}
+
+.gallery-image {
+    width: 200px;
+    height: 150px;
+    background-color: #edeaea;
+    margin: 0 10px 10px 0;
+   
+}
+
+#contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    background-color: #ffd700;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+li a{
+    text-decoration: none;
+
+}
+li a:hover{
+    transition: .1.2s;
+    color: #030303;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beauty Palace</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Hair Styling</h3>
+            <img src="https://thumbs.dreamstime.com/b/woman-facial-mask-beauty-salon-22945999.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="service">
+            <h3>Manicure & Pedicure</h3>
+            <img src="https://thumbs.dreamstime.com/b/woman-facial-mask-beauty-salon-22945999.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="service">
+            <h3>Facial Treatments</h3>
+            <img src="https://thumbs.dreamstime.com/b/woman-facial-mask-beauty-salon-22945999.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-image"></div>
+        <div class="gallery-image"></div>
+        <div class="gallery-image"></div>
+        <!-- Add more gallery images as needed -->
+    </section>
+    
+    <section id="box">
+       <h1>About Us</h1>
+       <p class="box">
+        The beauty parlour shop is the need of every age of men women and children famours poet keats defined the word beauty as : " A thing of beauty is a joy for ever: Beauty parlour is a very important shop to make the people good looking by application of cosmetics treatment of hair and nourishment of skin by various ...
+        The beauty parlour shop is the need of every age of men women and children famours poet keats defined the word beauty as : " A thing of beauty is a joy for ever: Beauty parlour is a very important shop to make the people good looking by application of cosmetics treatment of hair and nourishment of skin by various ...
+       </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Beauty Palace. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    alert('Message sent!'); // You can replace this with actual form submission logic
+});
+
+    </script>
+</body>
+</html>

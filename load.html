@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f5f5f5;
+        }
+        .loading{
+            position: relative;
+        }
+        .item{
+            display: inline-block;
+            margin: 0 7px;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            animation: load-ball 0.5s ease-in-out infinite alternate;
+        }
+        .item-1{
+            background: #3A8DF2;
+            animation-delay:0.1s ;
+        }
+        .item-2{
+            background: #E14E39;
+            animation-delay:0.2s ;
+        }
+        .item-3{
+            background: #FCC000;
+            animation-delay: 0.3s;
+        }
+        .item-4{
+            background: #3AA05C;
+            animation-delay: 0.4s;
+        }
+        @keyframes load-ball{
+            0%{
+                transform: translateY(0px);
+            }
+            100%{
+                transform: translateY(-13px);
+            }
+        }
+    </style>
+</head>
+
+    
+        <body>
+            <div class="loading">
+                <div class="item item-1"></div>
+                <div class="item item-2"></div>
+                <div class="item item-3"></div>
+                <div class="item item-4"></div>
+
+            </div>
+        </body>
+</html>

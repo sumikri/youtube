@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Document</title>
+    <style>
+      *{
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             font-family: 'Poppines'sans-serif;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+        }
+        .main{
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        .nav{
+            height: 100px;
+            width: 100%;
+             border-bottom:2px solid #dadada ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4vw;
+        }
+        .nav-part2{
+            display: flex;
+           align-items: center;
+            gap: 4vw;
+            align-items: center;
+        }
+        .nav h2{
+            font-size: 2vw;
+            font-weight: 700;
+        }
+        .nav h4{
+            font-size: 1vw;
+        }
+        .nav i{
+           
+            font-weight: 800;
+            display: none;
+
+        }
+        @media (max-width:600px) {
+            .nav{
+                
+                padding: 0.6vw;
+                height: 60px;
+            }
+            .nav h2{
+                font-size: 1.5vw;
+                font-weight: 700;
+            }
+            .nav h4{
+                font-size: 1.1vw;
+                display: none;
+              
+            }
+            .nav button{
+                display: none;
+            }
+            .nav i{
+                display: block;
+                font-size: 4.5vw;
+            }
+            .content{
+                height: calc(100% - 60px);
+                flex-direction: column;
+            }
+            .left{
+                width: 100%;
+                height: 50%;
+                padding: 4vw 6vw;
+            }
+            .right{
+                width: 100%;
+                height: 50%;
+            }
+            .left h1{
+                font-size: 10vw;
+                line-height: 11vw;
+            }
+            .left p{
+                font-size: 3vw;
+                width: 90%;
+                margin-top: 5vw;
+                margin-bottom: 6vw;
+
+            }
+            .content button{
+                padding: 3vw 6vw;
+                font-size: 3.5vw;
+                border-radius: 3px;
+                
+            }
+        }
+        .content{
+            height: calc(100% - 100px);
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+        .left{
+            height: 100%;
+            width: 55%;
+            padding: 5vw 3vw;
+        }
+        .left h1{
+            font-size:5vw ;
+            line-height: 4.4vw;
+        }
+        .left h1 span{
+            color: lightseagreen;
+        }
+        .left p{
+            font-size: 1.5vw;
+            font-weight: 600;
+            color: #666;
+            width: 80%;
+            margin-top:1.5vw ;
+            margin-bottom: 3vw;
+        }
+        .right{
+            height: 100%;
+            width: 45%;
+        }
+        button{
+            font-size: 1.2vw;
+            padding: 1.3vw 2.3vw;
+            background-color: lightseagreen;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            font-weight: 700;
+        }
+        .right img{
+            height: 100%;
+            width: 100%;
+        }
+        .content button{
+            font-size: 1.2vw;
+            padding: 1.3vw 2.3vw;
+            background-color: lightseagreen;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            font-weight: 700;
+        }
+        .nav button{
+            font-size: 1.2vw;
+            padding: 0.7vw 1.4vw;
+            background-color: lightseagreen;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+         <div class="nav">
+            <h2>Logo</h2>
+            <div class="nav-part2">
+                <h4>Store</h4>
+                <h4>Course</h4>
+                <h4>Career</h4>
+                <h4>Blog</h4>
+                <h4>Account</h4>
+                <button> Sign In</button>  
+                <i class="ri-menu-line"></i>
+            </div>
+         </div>
+         <div class="content">
+            <div class="left">
+            <h1>Learn From the <span>coolest</span> plateform of India.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos illum deleniti amet obcaecati explicabo saepe eveniet. Minima autem aliquid similique.</p>
+            <button>Explore</button>
+            </div>
+            <div class="right">
+                <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?size=338&ext=jpg&ga=GA1.1.1269040533.1708732800&semt=sph">
+            </div>
+
+         </div>
+    </div>
+</body>
+</html>
